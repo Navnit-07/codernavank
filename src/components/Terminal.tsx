@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type KeyboardEvent } from "react";
 
 export interface TermLine {
   type: "system" | "you" | "bot" | "event" | "error";
@@ -32,7 +32,7 @@ export default function Terminal({ lines, onSubmit }: Props) {
     setValue("");
   }
 
-  function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
+  function handleKeyDown(e: KeyboardEvent<HTMLInputElement>) {
     if (e.key === "Enter") {
       submit();
     } else if (e.key === "ArrowUp") {

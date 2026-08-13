@@ -1,4 +1,4 @@
-import { Chess, type Move } from "chess.js";
+import type { Chess, Move } from "chess.js";
 
 // A light, beatable bot: weights captures and checks higher than quiet moves,
 // nudges toward center control in the opening. Not trying to be Stockfish —

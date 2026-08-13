@@ -747,13 +747,3 @@ button {
   border-top: 1px solid var(--border);
   letter-spacing: 0.04em;
 }
-}
-
-.footer-tag {
-  text-align: center;
-  font-size: 10.5px;
-  color: var(--text-dim);
-  padding: 14px;
-  border-top: 1px solid var(--border);
-  letter-spacing: 0.04em;
-}

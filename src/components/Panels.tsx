@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 import type { PanelId } from "../lib/pieceRouter";
 import { ABOUT_LINES, ACHIEVEMENTS, COMMIT_LOG, EXPERIENCE, IDENTITY, PROJECTS, SKILLS } from "../lib/content";
 
@@ -143,7 +143,7 @@ function HirePanel({ hasWon }: { hasWon: boolean }) {
   const [sent, setSent] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
-  function handleSubmit(e: React.FormEvent) {
+  function handleSubmit(e: FormEvent) {
     e.preventDefault();
     const subject = encodeURIComponent(`Let's work together — from ${form.name || "a visitor"}`);
     const body = encodeURIComponent(
